@@ -1,2 +1,0 @@
-# Pilas
-A scrollable stackview.

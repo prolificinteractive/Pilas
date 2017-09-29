@@ -1,0 +1,16 @@
+PODS:
+  - Pilas (0.1.0)
+
+DEPENDENCIES:
+  - Pilas (from `../`)
+
+EXTERNAL SOURCES:
+  Pilas:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Pilas: 38af76818edb25faad1c821b8337d99eee692f44
+
+PODFILE CHECKSUM: 6f2a0f6f730fc8a0f1dee50ded76a4e9d2a7d2c3
+
+COCOAPODS: 1.2.1
