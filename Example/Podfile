@@ -1,11 +1,12 @@
+platform :ios, '9.0'
 use_frameworks!
 
 target 'Pilas_Example' do
+    
   pod 'Pilas', :path => '../'
 
   target 'Pilas_Tests' do
     inherit! :search_paths
 
-    
   end
 end
