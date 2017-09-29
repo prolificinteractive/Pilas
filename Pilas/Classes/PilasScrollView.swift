@@ -12,10 +12,10 @@ import UIKit
 public class PilasScrollView: UIScrollView {
     
     /// Stack view that contains all of the views.
-    let stackView = UIStackView()
+    public let stackView = UIStackView()
     
     /// Default bottom inset used to handle keyboard notifications.
-    var defaultBottomInset: CGFloat = 0
+    public var defaultBottomInset: CGFloat = 0
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
@@ -33,8 +33,8 @@ public class PilasScrollView: UIScrollView {
     /// - Parameter height: Used to constraint the height of the view.
     /// - Parameter width: Used to constraint the width of the view.
     public func insertView(view: UIView, height: CGFloat? = nil, width: CGFloat? = nil) {
-        stackView.addArrangedSubview(view)
-        
+        stackView.insertArrangedSubview(view, at: stackView.arrangedSubviews.count)
+
         if let height = height {
             view.heightAnchor.constraint(equalToConstant: height).isActive = true
         }
@@ -73,7 +73,7 @@ extension PilasScrollView {
     /// Increases the scrollview's bottom content inset to allow the keyboard to show.
     ///
     /// - Parameter notification: Notification used to grab the keyboard height.
-    @objc func onKeyboardShow(notification: NSNotification) {
+    @objc public func onKeyboardShow(notification: NSNotification) {
         guard let keyboardSize = (notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else {
             return
         }
@@ -83,7 +83,7 @@ extension PilasScrollView {
     /// Resets the scrollview's bottom inset to the default inset.
     ///
     /// - Parameter _: Notification unused.
-    @objc func onKeyboardDismiss(_: NSNotification) {
+    @objc public func onKeyboardDismiss(notification: NSNotification) {
         extendLayout(bottomInset: defaultBottomInset)
     }
     
@@ -104,19 +104,19 @@ extension PilasScrollView {
 private extension PilasScrollView {
     
     func setupStackView() {
-        setupConstraints()
-        
+        stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = UILayoutConstraintAxis.vertical
         stackView.distribution = UIStackViewDistribution.fill
-        stackView.alignment = UIStackViewAlignment.fill
+
+        setupConstraints()
     }
     
     private func setupConstraints() {
         addSubview(stackView)
-        stackView.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 1).isActive = true
         stackView.topAnchor.constraint(equalTo: topAnchor).isActive = true
         stackView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
         stackView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         stackView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+        stackView.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 1).isActive = true
     }
 }
