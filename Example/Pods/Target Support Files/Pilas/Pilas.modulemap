@@ -1,0 +1,6 @@
+framework module Pilas {
+  umbrella header "Pilas-umbrella.h"
+
+  export *
+  module * { export * }
+}
