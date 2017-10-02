@@ -17,7 +17,6 @@
 		9AE98B6FD82F6971887D1143A477740B /* Pilas-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B86013ED3E56D860360E804910351447 /* Pilas-dummy.m */; };
 		EB0E55A316D173D2E560D89E2667FCC5 /* Pods-Pilas_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F0A2EDD216E1C2AC6C8140FF23C1FB1 /* Pods-Pilas_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EDD6AC6DEA81A36D0A2FAF5CEDE8996A /* PilasScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD77667CEAEF3E71802FE676A40BBBD /* PilasScrollView.swift */; };
-		FB79C9489613ACBD70D1D032724EA6EA /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8663D5FA30BB6341F44E49575F86C3F /* ReplaceMe.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,13 +30,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		06027850F9C17A857970B3E6D7F424BB /* Pilas.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Pilas.modulemap; sourceTree = "<group>"; };
+		06027850F9C17A857970B3E6D7F424BB /* Pilas.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Pilas.modulemap; sourceTree = "<group>"; };
 		07862525D88B49439D9DFFBAF8DED622 /* Pods-Pilas_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Pilas_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		25CE135EE9CACFAD5405FC6C48065802 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C9F9A558007ED281CDF7C86D5D417EC /* Pods-Pilas_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Pilas_Example-frameworks.sh"; sourceTree = "<group>"; };
-		335227B604316DE6848151CD7BD8EA86 /* Pods-Pilas_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Pilas_Example.modulemap"; sourceTree = "<group>"; };
+		335227B604316DE6848151CD7BD8EA86 /* Pods-Pilas_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Pilas_Example.modulemap"; sourceTree = "<group>"; };
 		3963144C56E84CC667B72CFC11BEA924 /* Pods-Pilas_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Pilas_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		3B869203725AB07B3DFE7082C5E44F3D /* Pods-Pilas_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Pilas_Tests.modulemap"; sourceTree = "<group>"; };
+		3B869203725AB07B3DFE7082C5E44F3D /* Pods-Pilas_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Pilas_Tests.modulemap"; sourceTree = "<group>"; };
 		42C67F44CF681280C33F1080C01EE46D /* Pods-Pilas_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Pilas_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		60EE8157C3C7BCB44D61F4F2FEC30EBF /* Pods-Pilas_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Pilas_Example.release.xcconfig"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -45,10 +44,10 @@
 		84B7D190BFD7580B5E9431A80DF9484A /* Pods-Pilas_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Pilas_Example-resources.sh"; sourceTree = "<group>"; };
 		8A6A1C87F91EDCD7A627C6F34782D7CA /* Pods-Pilas_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Pilas_Example-dummy.m"; sourceTree = "<group>"; };
 		8F0A2EDD216E1C2AC6C8140FF23C1FB1 /* Pods-Pilas_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Pilas_Tests-umbrella.h"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9DD77667CEAEF3E71802FE676A40BBBD /* PilasScrollView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PilasScrollView.swift; sourceTree = "<group>"; };
 		9EAC931100922D9BB1D6B5C3E1158037 /* Pods-Pilas_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Pilas_Tests-resources.sh"; sourceTree = "<group>"; };
-		A6C2CB3FC483ADB979F592CA930E71ED /* Pods_Pilas_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Pilas_Example.framework; path = "Pods-Pilas_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6C2CB3FC483ADB979F592CA930E71ED /* Pods_Pilas_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pilas_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B86013ED3E56D860360E804910351447 /* Pilas-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pilas-dummy.m"; sourceTree = "<group>"; };
 		B8B8948793852DEB5885AC0207C7B1D0 /* Pods-Pilas_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Pilas_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		BC0A289D74B2955CBCC56076F08A91F6 /* Pilas-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pilas-prefix.pch"; sourceTree = "<group>"; };
@@ -56,11 +55,10 @@
 		BE865F15A1A9350F82D33302053B3485 /* Pods-Pilas_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Pilas_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		CA28C56C6EFF12C483318E5E7FD56381 /* Pilas.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pilas.xcconfig; sourceTree = "<group>"; };
 		D6D1F9BF7C86A6F6D6074B535544F2C2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D7B126753C9D0C00696EEC2515587E3B /* Pods_Pilas_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Pilas_Tests.framework; path = "Pods-Pilas_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D98A7E7B03BC4792F246D249D6ED1E67 /* Pilas.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pilas.framework; path = Pilas.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7B126753C9D0C00696EEC2515587E3B /* Pods_Pilas_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pilas_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D98A7E7B03BC4792F246D249D6ED1E67 /* Pilas.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pilas.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA27FD0F36411F15D1E1F8ECDA8AD79B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E30C2EBE7BB38B27B0BE0FB5A8F54986 /* Pilas-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pilas-umbrella.h"; sourceTree = "<group>"; };
-		E8663D5FA30BB6341F44E49575F86C3F /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReplaceMe.swift; sourceTree = "<group>"; };
 		EAC06880514F92482E7D8A6FFB7E2976 /* Pods-Pilas_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Pilas_Tests-dummy.m"; sourceTree = "<group>"; };
 		F8F3D6FF42DD9F56C6D8EBB9A4C99C2A /* Pods-Pilas_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Pilas_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		FDBE566CC793761A888A53E41D566732 /* Pods-Pilas_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Pilas_Example-umbrella.h"; sourceTree = "<group>"; };
@@ -132,9 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				9DD77667CEAEF3E71802FE676A40BBBD /* PilasScrollView.swift */,
-				E8663D5FA30BB6341F44E49575F86C3F /* ReplaceMe.swift */,
 			);
-			name = Classes;
 			path = Classes;
 			sourceTree = "<group>";
 		};
@@ -205,7 +201,6 @@
 			children = (
 				494F1C77A925EB566F9D0DE7A4A224A8 /* Classes */,
 			);
-			name = Pilas;
 			path = Pilas;
 			sourceTree = "<group>";
 		};
@@ -360,7 +355,6 @@
 			files = (
 				9AE98B6FD82F6971887D1143A477740B /* Pilas-dummy.m in Sources */,
 				EDD6AC6DEA81A36D0A2FAF5CEDE8996A /* PilasScrollView.swift in Sources */,
-				FB79C9489613ACBD70D1D032724EA6EA /* ReplaceMe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
