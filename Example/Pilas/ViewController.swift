@@ -50,6 +50,10 @@ class ViewController: UIViewController {
         stackViewScrollView.insertDividerView(height: 10, backgroundColor: UIColor.black)
         
         insertColorViews()
+        
+        stackViewScrollView.insertDividerView(height: 10, backgroundColor: UIColor.black)
+        stackViewScrollView.insertView(view: sampleHorizontalPilasScrollView(), height: 75)
+        stackViewScrollView.insertDividerView(height: 10, backgroundColor: UIColor.black)
     }
     
     private func insertColorViews() {
@@ -57,6 +61,32 @@ class ViewController: UIViewController {
         stackViewScrollView.insertView(view: sampleBackgroundView(backgroundColor: UIColor.red), height: 75)
         stackViewScrollView.insertView(view: sampleBackgroundView(backgroundColor: UIColor.green), height: 100)
         stackViewScrollView.insertView(view: sampleBackgroundView(backgroundColor: UIColor.gray), height: 125)
+    }
+    
+    private func sampleHorizontalPilasScrollView() -> PilasScrollView {
+        let horizontalScrollView = PilasScrollView();
+        horizontalScrollView.axis = .horizontal
+        
+        horizontalScrollView.insertDividerView(width: 10, backgroundColor: UIColor.black)
+        horizontalScrollView.insertView(view: sampleBackgroundView(backgroundColor: UIColor.darkGray), width: 75)
+        horizontalScrollView.insertDividerView(width: 10, backgroundColor: UIColor.black)
+        
+        horizontalScrollView.insertView(view: sampleBackgroundView(backgroundColor: UIColor.darkGray), width: 75)
+        horizontalScrollView.insertDividerView(width: 10, backgroundColor: UIColor.black)
+        
+        horizontalScrollView.insertView(view: sampleBackgroundView(backgroundColor: UIColor.darkGray), width: 75)
+        horizontalScrollView.insertDividerView(width: 10, backgroundColor: UIColor.black)
+        
+        horizontalScrollView.insertView(view: sampleBackgroundView(backgroundColor: UIColor.darkGray), width: 75)
+        horizontalScrollView.insertDividerView(width: 10, backgroundColor: UIColor.black)
+        
+        horizontalScrollView.insertView(view: sampleBackgroundView(backgroundColor: UIColor.darkGray), width: 75)
+        horizontalScrollView.insertDividerView(width: 10, backgroundColor: UIColor.black)
+        
+        horizontalScrollView.insertView(view: sampleBackgroundView(backgroundColor: UIColor.darkGray), width: 75)
+        horizontalScrollView.insertDividerView(width: 10, backgroundColor: UIColor.black)
+        
+        return horizontalScrollView
     }
     
     private func sampleTextFieldView() -> UIView {

@@ -11,11 +11,19 @@ import UIKit
 /// Scrollview that contains a stackview to simple scrollable content.
 public class PilasScrollView: UIScrollView {
     
-    /// Stack view that contains all of the views.
-    public let stackView = UIStackView()
-    
     /// Default bottom inset used to handle keyboard notifications.
     public var defaultBottomInset: CGFloat = 0
+    
+    public var axis: UILayoutConstraintAxis = .vertical {
+        didSet {
+            setupConstaints(axis: axis)
+        }
+    }
+    
+    /// Stack view that contains all of the views.
+    fileprivate let stackView = UIStackView()
+    
+    fileprivate var sizeConstraint: NSLayoutConstraint?
     
     public override init(frame: CGRect) {
         super.init(frame: frame)
@@ -105,10 +113,22 @@ private extension PilasScrollView {
     
     func setupStackView() {
         stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.axis = UILayoutConstraintAxis.vertical
         stackView.distribution = UIStackViewDistribution.fill
 
         setupConstraints()
+    }
+    
+    func setupConstaints(axis: UILayoutConstraintAxis) {
+        stackView.axis = axis
+        sizeConstraint?.isActive = false
+        
+        if axis == .vertical {
+            sizeConstraint = stackView.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 1)
+        } else {
+            sizeConstraint = stackView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 1)
+        }
+        
+        sizeConstraint?.isActive = true
     }
     
     private func setupConstraints() {
@@ -117,6 +137,7 @@ private extension PilasScrollView {
         stackView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
         stackView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         stackView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-        stackView.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 1).isActive = true
+        
+        setupConstaints(axis: axis)
     }
 }
