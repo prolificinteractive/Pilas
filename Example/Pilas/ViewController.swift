@@ -44,16 +44,15 @@ class ViewController: UIViewController {
         insertColorViews()
         
         stackViewScrollView.insertDividerView(height: 10, backgroundColor: UIColor.black)
+        stackViewScrollView.insertView(view: sampleHorizontalPilasScrollView(), height: 75)
+        stackViewScrollView.insertDividerView(height: 10, backgroundColor: UIColor.black)
+        
         stackViewScrollView.insertView(view: sampleTextFieldView())
         stackViewScrollView.insertDividerView(height: 10, backgroundColor: UIColor.black)
         stackViewScrollView.insertView(view: sampleTextFieldView())
         stackViewScrollView.insertDividerView(height: 10, backgroundColor: UIColor.black)
         
         insertColorViews()
-        
-        stackViewScrollView.insertDividerView(height: 10, backgroundColor: UIColor.black)
-        stackViewScrollView.insertView(view: sampleHorizontalPilasScrollView(), height: 75)
-        stackViewScrollView.insertDividerView(height: 10, backgroundColor: UIColor.black)
     }
     
     private func insertColorViews() {
