@@ -35,6 +35,10 @@ public class PilasScrollView: UIScrollView {
         setupStackView()
     }
     
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
     /// Inserts a new view below the content already inside of the stack view.
     ///
     /// - Parameter view: Used to insert below the current content on the stack view.
@@ -112,6 +116,8 @@ extension PilasScrollView {
 private extension PilasScrollView {
     
     func setupStackView() {
+        observeKeyboardAppearance()
+        
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.distribution = UIStackViewDistribution.fill
 
@@ -139,5 +145,17 @@ private extension PilasScrollView {
         stackView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         
         setupConstaints(axis: axis)
+    }
+    
+    private func observeKeyboardAppearance() {
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(onKeyboardShow(notification:)),
+                                               name: NSNotification.Name.UIKeyboardWillShow,
+                                               object: nil)
+        
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(onKeyboardDismiss(notification:)),
+                                               name: NSNotification.Name.UIKeyboardWillHide,
+                                               object: nil)
     }
 }

@@ -18,28 +18,6 @@ class ViewController: UIViewController {
         setupStackView()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        observeKeyboardAppearance()
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        NotificationCenter.default.removeObserver(self)
-    }
-    
-    func observeKeyboardAppearance() {
-        NotificationCenter.default.addObserver(stackViewScrollView,
-                                               selector: #selector(stackViewScrollView.onKeyboardShow(notification:)),
-                                               name: NSNotification.Name.UIKeyboardWillShow,
-                                               object: nil)
-        
-        NotificationCenter.default.addObserver(stackViewScrollView,
-                                               selector: #selector(stackViewScrollView.onKeyboardDismiss(notification:)),
-                                               name: NSNotification.Name.UIKeyboardWillHide,
-                                               object: nil)
-    }
-    
     private func setupStackView() {
         insertColorViews()
         
