@@ -11,6 +11,9 @@ import UIKit
 /// Scrollview that contains a stackview to simple scrollable content.
 public class PilasScrollView: UIScrollView {
     
+    /// Enables the keyboard notifications for updating the content inset of the scrollview.
+    public var enableKeyboardNotifications = true
+    
     /// Default bottom inset used to handle keyboard notifications.
     public var defaultBottomInset: CGFloat = 0
     
