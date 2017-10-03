@@ -11,19 +11,6 @@ import UIKit
 /// Scrollview that contains a stackview to simple scrollable content.
 public class PilasScrollView: UIScrollView {
     
-    /// Enables the keyboard notifications for updating the content inset of the scrollview.
-    public var enableKeyboardNotifications = true
-    
-    /// Default bottom inset used to handle keyboard notifications.
-    public var defaultBottomInset: CGFloat = 0
-    
-    /// Updated the axis of the stack view and it's constraints.
-    public var axis: UILayoutConstraintAxis = .vertical {
-        didSet {
-            setupConstaints(axis: axis)
-        }
-    }
-    
     /// StackView's spacing property.
     public var spacing: CGFloat {
         get {
@@ -50,6 +37,19 @@ public class PilasScrollView: UIScrollView {
             stackView.alignment = newValue
         }
     }
+    
+    /// Updated the axis of the stack view and it's constraints.
+    public var axis: UILayoutConstraintAxis = .vertical {
+        didSet {
+            setupConstaints(axis: axis)
+        }
+    }
+    
+    /// Enables the keyboard notifications for updating the content inset of the scrollview.
+    public var enableKeyboardNotifications = true
+    
+    /// Default bottom inset used to handle keyboard notifications.
+    public var defaultBottomInset: CGFloat = 0
     
     /// Stack view that contains all of the views.
     fileprivate let stackView = UIStackView()
