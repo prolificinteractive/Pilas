@@ -13,7 +13,7 @@ A scrollable StackView for quick UI creation.
 
 ## Requirements
 
-* iOS 8.0+
+* iOS 9.0+
 
 ## Installation
 
@@ -67,14 +67,14 @@ pilasScrollView.insertDividerView(height: 10, backgroundColor: UIColor.black)
 
 ### Keyboard Notifications
 
-Keyboard show and hide notifications are enabled by default to increase or decrease the content inset. The default bottom inset can be customized if a project needs a default bottom inset that is not 0
+Keyboard show and hide notifications are enabled by default to increase or decrease the content inset. The default bottom inset can be customized if a project needs a default bottom inset that is not 0.
 
 ```swift
 pilasScrollView.enableKeyboardNotifications = true
 pilasScrollView.defaultBottomInset = 0
 ```
 
-## Contributing to PROJECT_NAME
+## Contributing to Pilas
 
 To report a bug or enhancement request, feel free to file an issue under the respective heading.
 
