@@ -9,6 +9,8 @@
 
 A scrollable StackView for quick UI creation.
 
+![Pilas.gif](Images/Pilas.gif)
+
 ## Requirements
 
 * iOS 8.0+
