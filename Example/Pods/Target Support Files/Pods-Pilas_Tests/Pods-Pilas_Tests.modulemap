@@ -1,6 +1,0 @@
-framework module Pods_Pilas_Tests {
-  umbrella header "Pods-Pilas_Tests-umbrella.h"
-
-  export *
-  module * { export * }
-}
