@@ -1,9 +1,9 @@
 # Pilas
 
-[![Travis build status](https://img.shields.io/travis/prolificinteractive/PROJECT_NAME.svg?style=flat-square)](https://travis-ci.org/prolificinteractive/PROJECT_NAME)
-[![Cocoapods Compatible](https://img.shields.io/cocoapods/v/PROJECT_NAME.svg?style=flat-square)](https://img.shields.io/cocoapods/v/PROJECT_NAME.svg)
-[![Platform](https://img.shields.io/cocoapods/p/PROJECT_NAME.svg?style=flat-square)](http://cocoadocs.org/docsets/PROJECT_NAME)
-[![Docs](https://img.shields.io/cocoapods/metrics/doc-percent/PROJECT_NAME.svg?style=flat-square)](http://cocoadocs.org/docsets/PROJECT_NAME)
+[![Travis build status](https://img.shields.io/travis/prolificinteractive/Pilas.svg?style=flat-square)](https://travis-ci.org/prolificinteractive/Pilas)
+[![Cocoapods Compatible](https://img.shields.io/cocoapods/v/Pilas.svg?style=flat-square)](https://img.shields.io/cocoapods/v/Pilas.svg)
+[![Platform](https://img.shields.io/cocoapods/p/Pilas.svg?style=flat-square)](http://cocoadocs.org/docsets/Pilas)
+[![Docs](https://img.shields.io/cocoapods/metrics/doc-percent/Pilas.svg?style=flat-square)](http://cocoadocs.org/docsets/Pilas)
 
 ## Description
 
