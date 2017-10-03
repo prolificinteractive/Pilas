@@ -1,9 +1,9 @@
 {
   "name": "Pilas",
-  "version": "0.1.0",
-  "summary": "A short description of Pilas.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/jgsamudio/Pilas",
+  "version": "0.1.1",
+  "summary": "A scrollable StackView for quick UI creation.",
+  "description": "Pilas is a custom ScrollView that contains a stackview to insert views vertically or horizontally.",
+  "homepage": "https://github.com/prolificinteractive/Pilas",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,8 +12,8 @@
     "jgsamudio": "jonathan2457@gmail.com"
   },
   "source": {
-    "git": "https://github.com/jgsamudio/Pilas.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/prolificinteractive/Pilas.git",
+    "tag": "0.1.1"
   },
   "platforms": {
     "ios": "9.0"

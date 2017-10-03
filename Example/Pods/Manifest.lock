@@ -1,5 +1,5 @@
 PODS:
-  - Pilas (0.1.0)
+  - Pilas (0.1.1)
 
 DEPENDENCIES:
   - Pilas (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Pilas: f8d2f8c5c7701e212d796d16656b555237b4ebed
+  Pilas: 7b8b7ef6b7b5fde44344439c12e998347809cf07
 
 PODFILE CHECKSUM: 86f43ebe2e55af415d37e418ae1a73019b9fc539
 
