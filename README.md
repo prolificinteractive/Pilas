@@ -84,6 +84,6 @@ If you wish to contribute to the project, fork this repo and submit a pull reque
 
 Copyright (c) 2017 Prolific Interactive
 
-PROJECT_NAME is maintained and sponsored by Prolific Interactive. It may be redistributed under the terms specified in the [LICENSE] file.
+Pilas is maintained and sponsored by Prolific Interactive. It may be redistributed under the terms specified in the [LICENSE] file.
 
 [LICENSE]: ./LICENSE
