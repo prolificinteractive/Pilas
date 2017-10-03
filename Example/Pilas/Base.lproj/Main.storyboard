@@ -53,12 +53,44 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="p6U-hk-uXY"/>
+                        <segue destination="oF4-hr-QSe" kind="relationship" relationship="rootViewController" id="qjJ-4H-n7i"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YHb-JA-pmd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="165.59999999999999" y="33.733133433283363"/>
+            <point key="canvasLocation" x="-457" y="30"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Mi6-Ue-s7O">
+            <objects>
+                <viewController id="oF4-hr-QSe" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gcO-AG-Uah"/>
+                        <viewControllerLayoutGuide type="bottom" id="Gqz-bC-vDs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="R5Q-sb-S8z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ukt-4D-fnO">
+                                <rect key="frame" x="164" y="318" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="vXZ-lx-hvc" kind="show" id="mVI-jl-8dG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ukt-4D-fnO" firstAttribute="centerX" secondItem="R5Q-sb-S8z" secondAttribute="centerX" id="0Ae-dd-7w4"/>
+                            <constraint firstItem="Ukt-4D-fnO" firstAttribute="centerY" secondItem="R5Q-sb-S8z" secondAttribute="centerY" id="VcO-Hc-12V"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="mDA-2M-FVZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dAP-Y8-TWY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="230" y="29"/>
         </scene>
     </scenes>
 </document>

@@ -46,7 +46,15 @@ public class PilasScrollView: UIScrollView {
     }
     
     /// Enables the keyboard notifications for updating the content inset of the scrollview.
-    public var enableKeyboardNotifications = true
+    public var enableKeyboardNotifications = true {
+        didSet {
+            if enableKeyboardNotifications && enableKeyboardNotifications != oldValue {
+                observeKeyboardAppearance()
+            } else {
+                NotificationCenter.default.removeObserver(self)
+            }
+        }
+    }
     
     /// Default bottom inset used to handle keyboard notifications.
     public var defaultBottomInset: CGFloat = 0
@@ -168,17 +176,7 @@ private extension PilasScrollView {
         sizeConstraint?.isActive = true
     }
     
-    private func setupConstraints() {
-        addSubview(stackView)
-        stackView.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        stackView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-        stackView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
-        stackView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-        
-        setupConstaints(axis: axis)
-    }
-    
-    private func observeKeyboardAppearance() {
+    func observeKeyboardAppearance() {
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(onKeyboardShow(notification:)),
                                                name: NSNotification.Name.UIKeyboardWillShow,
@@ -188,5 +186,15 @@ private extension PilasScrollView {
                                                selector: #selector(onKeyboardDismiss(notification:)),
                                                name: NSNotification.Name.UIKeyboardWillHide,
                                                object: nil)
+    }
+    
+    private func setupConstraints() {
+        addSubview(stackView)
+        stackView.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        stackView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        stackView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
+        stackView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+        
+        setupConstaints(axis: axis)
     }
 }
