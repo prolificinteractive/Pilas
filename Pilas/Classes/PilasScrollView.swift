@@ -17,9 +17,37 @@ public class PilasScrollView: UIScrollView {
     /// Default bottom inset used to handle keyboard notifications.
     public var defaultBottomInset: CGFloat = 0
     
+    /// Updated the axis of the stack view and it's constraints.
     public var axis: UILayoutConstraintAxis = .vertical {
         didSet {
             setupConstaints(axis: axis)
+        }
+    }
+    
+    /// StackView's spacing property.
+    public var spacing: CGFloat {
+        get {
+            return stackView.spacing
+        } set {
+            stackView.spacing = newValue
+        }
+    }
+    
+    /// StackView's distribution property.
+    public var distribution: UIStackViewDistribution {
+        get {
+            return stackView.distribution
+        } set {
+            stackView.distribution = newValue
+        }
+    }
+    
+    /// StackView's alignment property.
+    public var alignment: UIStackViewAlignment {
+        get {
+            return stackView.alignment
+        } set {
+            stackView.alignment = newValue
         }
     }
     
