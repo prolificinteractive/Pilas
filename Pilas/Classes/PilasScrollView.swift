@@ -46,7 +46,7 @@ public class PilasScrollView: UIScrollView {
     }
     
     /// Enables the keyboard notifications for updating the content inset of the scrollview.
-    public var enableKeyboardNotifications = true {
+    public var enableKeyboardNotifications = false {
         didSet {
             if enableKeyboardNotifications && enableKeyboardNotifications != oldValue {
                 observeKeyboardAppearance()
@@ -155,8 +155,6 @@ extension PilasScrollView {
 private extension PilasScrollView {
     
     func setupStackView() {
-        observeKeyboardAppearance()
-        
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.distribution = UIStackViewDistribution.fill
 

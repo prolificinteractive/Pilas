@@ -19,6 +19,8 @@ class ViewController: UIViewController {
     }
     
     private func setupStackView() {
+        stackViewScrollView.enableKeyboardNotifications = true
+        
         insertColorViews()
         
         stackViewScrollView.insertDividerView(height: 10, backgroundColor: UIColor.black)
