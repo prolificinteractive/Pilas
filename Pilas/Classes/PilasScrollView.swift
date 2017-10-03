@@ -11,17 +11,53 @@ import UIKit
 /// Scrollview that contains a stackview to simple scrollable content.
 public class PilasScrollView: UIScrollView {
     
-    /// Enables the keyboard notifications for updating the content inset of the scrollview.
-    public var enableKeyboardNotifications = true
+    /// StackView's spacing property.
+    public var spacing: CGFloat {
+        get {
+            return stackView.spacing
+        } set {
+            stackView.spacing = newValue
+        }
+    }
     
-    /// Default bottom inset used to handle keyboard notifications.
-    public var defaultBottomInset: CGFloat = 0
+    /// StackView's distribution property.
+    public var distribution: UIStackViewDistribution {
+        get {
+            return stackView.distribution
+        } set {
+            stackView.distribution = newValue
+        }
+    }
     
+    /// StackView's alignment property.
+    public var alignment: UIStackViewAlignment {
+        get {
+            return stackView.alignment
+        } set {
+            stackView.alignment = newValue
+        }
+    }
+    
+    /// Updated the axis of the stack view and it's constraints.
     public var axis: UILayoutConstraintAxis = .vertical {
         didSet {
             setupConstaints(axis: axis)
         }
     }
+    
+    /// Enables the keyboard notifications for updating the content inset of the scrollview.
+    public var enableKeyboardNotifications = false {
+        didSet {
+            if enableKeyboardNotifications && enableKeyboardNotifications != oldValue {
+                observeKeyboardAppearance()
+            } else {
+                NotificationCenter.default.removeObserver(self)
+            }
+        }
+    }
+    
+    /// Default bottom inset used to handle keyboard notifications.
+    public var defaultBottomInset: CGFloat = 0
     
     /// Stack view that contains all of the views.
     fileprivate let stackView = UIStackView()
@@ -119,8 +155,6 @@ extension PilasScrollView {
 private extension PilasScrollView {
     
     func setupStackView() {
-        observeKeyboardAppearance()
-        
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.distribution = UIStackViewDistribution.fill
 
@@ -140,17 +174,7 @@ private extension PilasScrollView {
         sizeConstraint?.isActive = true
     }
     
-    private func setupConstraints() {
-        addSubview(stackView)
-        stackView.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        stackView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
-        stackView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
-        stackView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
-        
-        setupConstaints(axis: axis)
-    }
-    
-    private func observeKeyboardAppearance() {
+    func observeKeyboardAppearance() {
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(onKeyboardShow(notification:)),
                                                name: NSNotification.Name.UIKeyboardWillShow,
@@ -160,5 +184,15 @@ private extension PilasScrollView {
                                                selector: #selector(onKeyboardDismiss(notification:)),
                                                name: NSNotification.Name.UIKeyboardWillHide,
                                                object: nil)
+    }
+    
+    private func setupConstraints() {
+        addSubview(stackView)
+        stackView.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        stackView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        stackView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
+        stackView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
+        
+        setupConstaints(axis: axis)
     }
 }
