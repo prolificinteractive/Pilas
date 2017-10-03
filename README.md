@@ -2,20 +2,16 @@
 
 [![Travis build status](https://img.shields.io/travis/prolificinteractive/PROJECT_NAME.svg?style=flat-square)](https://travis-ci.org/prolificinteractive/PROJECT_NAME)
 [![Cocoapods Compatible](https://img.shields.io/cocoapods/v/PROJECT_NAME.svg?style=flat-square)](https://img.shields.io/cocoapods/v/PROJECT_NAME.svg)
-[![Platform](https://img.shields.io/cocoapods/p/PROJECT_NAME.svg?style=flat-square)](http://cocoadocs.org/docsets/PROJECT_NAME)markdown-preview://editor/8
+[![Platform](https://img.shields.io/cocoapods/p/PROJECT_NAME.svg?style=flat-square)](http://cocoadocs.org/docsets/PROJECT_NAME)
 [![Docs](https://img.shields.io/cocoapods/metrics/doc-percent/PROJECT_NAME.svg?style=flat-square)](http://cocoadocs.org/docsets/PROJECT_NAME)
 
-A scrollable stackeview for quick UI creation.
+## Description
 
-## Features
-
-- Useful thing 1
-- Useful thing 2
+A scrollable StackView for quick UI creation.
 
 ## Requirements
 
 * iOS 8.0+
-* Xcode 7.0+
 
 ## Installation
 
@@ -29,6 +25,8 @@ pod 'Pilas'
 
 ## Usage
 
+### Initialization
+
 A PilasScrollView can be initialized through a storyboard or programmatically.
 
 ```swift
@@ -39,10 +37,10 @@ A PilasScrollView can be initialized through a storyboard or programmatically.
 var pilasScrollView = PilasScrollView()
 ```
 
-The axis of the stackview can be changed to change stack and scroll direction.
+The axis of the StackView can be changed to change stack and scroll direction. Default is set to vertical.
 
 ```swift
-horizontalScrollView.axis = .horizontal
+horizontalScrollView.axis = .vertical
 ```
 ### Inserting Views
 
@@ -67,11 +65,11 @@ pilasScrollView.insertDividerView(height: 10, backgroundColor: UIColor.black)
 
 ### Keyboard Notifications
 
-Keyboard show and hide notifications are enabled by default to increase or decrease the content inset.
+Keyboard show and hide notifications are enabled by default to increase or decrease the content inset. The default bottom inset can be customized if a project needs a default bottom inset that is not 0
 
 ```swift
-pilasScrollView.axis = .vertical
-pilasScrollView.insertDividerView(height: 10, backgroundColor: UIColor.black)
+pilasScrollView.enableKeyboardNotifications = true
+pilasScrollView.defaultBottomInset = 0
 ```
 
 ## Contributing to PROJECT_NAME
